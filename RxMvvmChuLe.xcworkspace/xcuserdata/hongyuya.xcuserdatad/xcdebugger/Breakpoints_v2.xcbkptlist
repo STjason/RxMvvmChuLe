@@ -14,8 +14,8 @@
             filePath = "RxMvvmChuLe/MaskMapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "fetchApi()"
             landmarkType = "7">
          </BreakpointContent>

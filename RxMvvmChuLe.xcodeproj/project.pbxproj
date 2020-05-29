@@ -8,16 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		5D789BCD94C2A7A447BAD174 /* Pods_RxMvvmChuLeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396D0CC69CE1696B9F07797 /* Pods_RxMvvmChuLeTests.framework */; };
-		5E2371DF247D0D2E00F72457 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2371DE247D0D2E00F72457 /* UIView+Ext.swift */; };
-		5E2371E1247D119600F72457 /* MaskMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2371E0247D119600F72457 /* MaskMapViewModel.swift */; };
 		5EB9CBA6247CC35A0042D27D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBA5247CC35A0042D27D /* AppDelegate.swift */; };
 		5EB9CBA8247CC35A0042D27D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBA7247CC35A0042D27D /* SceneDelegate.swift */; };
-		5EB9CBAA247CC35A0042D27D /* MaskMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBA9247CC35A0042D27D /* MaskMapViewController.swift */; };
 		5EB9CBAD247CC35A0042D27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9CBAB247CC35A0042D27D /* Main.storyboard */; };
 		5EB9CBAF247CC35E0042D27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9CBAE247CC35E0042D27D /* Assets.xcassets */; };
 		5EB9CBB2247CC35E0042D27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9CBB0247CC35E0042D27D /* LaunchScreen.storyboard */; };
 		5EB9CBBD247CC35E0042D27D /* RxMvvmChuLeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBBC247CC35E0042D27D /* RxMvvmChuLeTests.swift */; };
 		66670B1951B2F2DF59297D04 /* Pods_RxMvvmChuLe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B277E961B7D4449D25A1D7A /* Pods_RxMvvmChuLe.framework */; };
+		E4E731FFE4F18A2098EB3FAB /* MaskMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E73921B0F44D6508C9CCBF /* MaskMapViewModel.swift */; };
+		E4E73225A766F17DFDB9B4BE /* MaskDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7358FFFC122FBA331EB64 /* MaskDataModel.swift */; };
+		E4E73333E08559CC1291CA18 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E731E40BD505ED1F76EBD3 /* UIView+Ext.swift */; };
+		E4E735F5E8A78262B9730DA4 /* Formatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7352A8DAA3FB0C67D92C2 /* Formatter+Ext.swift */; };
+		E4E737EBB859BF2F3489E566 /* MaskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E73DFAB1A48DDB3A17015C /* MaskAPI.swift */; };
+		E4E738528F4884C563962E1A /* MaskMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7363415B5604D13791395 /* MaskMapViewController.swift */; };
+		E4E73A16C8E1636D9B49D53F /* MaskAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E738A4B175C0A6622CDBA9 /* MaskAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +39,9 @@
 		2396D0CC69CE1696B9F07797 /* Pods_RxMvvmChuLeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMvvmChuLeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E1097FB0AD5B2CAEDA284D /* Pods-RxMvvmChuLe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMvvmChuLe.debug.xcconfig"; path = "Target Support Files/Pods-RxMvvmChuLe/Pods-RxMvvmChuLe.debug.xcconfig"; sourceTree = "<group>"; };
 		5B277E961B7D4449D25A1D7A /* Pods_RxMvvmChuLe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMvvmChuLe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E2371DE247D0D2E00F72457 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
-		5E2371E0247D119600F72457 /* MaskMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskMapViewModel.swift; sourceTree = "<group>"; };
 		5EB9CBA2247CC35A0042D27D /* RxMvvmChuLe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMvvmChuLe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB9CBA5247CC35A0042D27D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB9CBA7247CC35A0042D27D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EB9CBA9247CC35A0042D27D /* MaskMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskMapViewController.swift; sourceTree = "<group>"; };
 		5EB9CBAC247CC35A0042D27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EB9CBAE247CC35E0042D27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB9CBB1247CC35E0042D27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,13 @@
 		5EB9CBBC247CC35E0042D27D /* RxMvvmChuLeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMvvmChuLeTests.swift; sourceTree = "<group>"; };
 		5EB9CBBE247CC35E0042D27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87415403AE8A64C4F5B5175C /* Pods-RxMvvmChuLe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMvvmChuLe.release.xcconfig"; path = "Target Support Files/Pods-RxMvvmChuLe/Pods-RxMvvmChuLe.release.xcconfig"; sourceTree = "<group>"; };
+		E4E731E40BD505ED1F76EBD3 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		E4E7352A8DAA3FB0C67D92C2 /* Formatter+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatter+Ext.swift"; sourceTree = "<group>"; };
+		E4E7358FFFC122FBA331EB64 /* MaskDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskDataModel.swift; sourceTree = "<group>"; };
+		E4E7363415B5604D13791395 /* MaskMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskMapViewController.swift; sourceTree = "<group>"; };
+		E4E738A4B175C0A6622CDBA9 /* MaskAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskAnnotation.swift; sourceTree = "<group>"; };
+		E4E73921B0F44D6508C9CCBF /* MaskMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskMapViewModel.swift; sourceTree = "<group>"; };
+		E4E73DFAB1A48DDB3A17015C /* MaskAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskAPI.swift; sourceTree = "<group>"; };
 		F1B11806E6D52F16FB3BA34C /* Pods-RxMvvmChuLeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMvvmChuLeTests.debug.xcconfig"; path = "Target Support Files/Pods-RxMvvmChuLeTests/Pods-RxMvvmChuLeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,13 +105,14 @@
 			children = (
 				5EB9CBA5247CC35A0042D27D /* AppDelegate.swift */,
 				5EB9CBA7247CC35A0042D27D /* SceneDelegate.swift */,
-				5EB9CBA9247CC35A0042D27D /* MaskMapViewController.swift */,
-				5E2371E0247D119600F72457 /* MaskMapViewModel.swift */,
 				5EB9CBAB247CC35A0042D27D /* Main.storyboard */,
 				5EB9CBAE247CC35E0042D27D /* Assets.xcassets */,
 				5EB9CBB0247CC35E0042D27D /* LaunchScreen.storyboard */,
 				5EB9CBB3247CC35E0042D27D /* Info.plist */,
-				5E2371DE247D0D2E00F72457 /* UIView+Ext.swift */,
+				E4E73EC5B7D7F6682ADA7D2E /* MaskMap */,
+				E4E734AB3BD75BA9930C917D /* Service */,
+				E4E731DC86D894B5A915B46D /* Extension */,
+				E4E7319F17FD1262B08D8304 /* Model */,
 			);
 			path = RxMvvmChuLe;
 			sourceTree = "<group>";
@@ -126,6 +135,41 @@
 				03F981FF7C98BACD4D6E17CE /* Pods-RxMvvmChuLeTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E4E7319F17FD1262B08D8304 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4E738A4B175C0A6622CDBA9 /* MaskAnnotation.swift */,
+				E4E7358FFFC122FBA331EB64 /* MaskDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4E731DC86D894B5A915B46D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E4E731E40BD505ED1F76EBD3 /* UIView+Ext.swift */,
+				E4E7352A8DAA3FB0C67D92C2 /* Formatter+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E4E734AB3BD75BA9930C917D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E4E73DFAB1A48DDB3A17015C /* MaskAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E4E73EC5B7D7F6682ADA7D2E /* MaskMap */ = {
+			isa = PBXGroup;
+			children = (
+				E4E7363415B5604D13791395 /* MaskMapViewController.swift */,
+				E4E73921B0F44D6508C9CCBF /* MaskMapViewModel.swift */,
+			);
+			path = MaskMap;
 			sourceTree = "<group>";
 		};
 		EFFEB3344BA30F6786E64C4A /* Frameworks */ = {
@@ -323,11 +367,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E2371DF247D0D2E00F72457 /* UIView+Ext.swift in Sources */,
-				5E2371E1247D119600F72457 /* MaskMapViewModel.swift in Sources */,
-				5EB9CBAA247CC35A0042D27D /* MaskMapViewController.swift in Sources */,
 				5EB9CBA6247CC35A0042D27D /* AppDelegate.swift in Sources */,
 				5EB9CBA8247CC35A0042D27D /* SceneDelegate.swift in Sources */,
+				E4E738528F4884C563962E1A /* MaskMapViewController.swift in Sources */,
+				E4E731FFE4F18A2098EB3FAB /* MaskMapViewModel.swift in Sources */,
+				E4E737EBB859BF2F3489E566 /* MaskAPI.swift in Sources */,
+				E4E73333E08559CC1291CA18 /* UIView+Ext.swift in Sources */,
+				E4E735F5E8A78262B9730DA4 /* Formatter+Ext.swift in Sources */,
+				E4E73A16C8E1636D9B49D53F /* MaskAnnotation.swift in Sources */,
+				E4E73225A766F17DFDB9B4BE /* MaskDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

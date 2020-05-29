@@ -18,7 +18,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-Mb-d29">
                                 <rect key="frame" x="0.0" y="53" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="fdsafdsa" id="Dco-yW-9jP">
+                                    <navigationItem title="Adult Mask Count In County" id="Dco-yW-9jP">
                                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="KOA-A9-zU9">
                                             <connections>
                                                 <action selector="clickToRefresh:" destination="BYZ-38-t0r" id="nZ1-AM-LI8"/>
