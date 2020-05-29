@@ -3,14 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5D789BCD94C2A7A447BAD174 /* Pods_RxMvvmChuLeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2396D0CC69CE1696B9F07797 /* Pods_RxMvvmChuLeTests.framework */; };
+		5E2371DF247D0D2E00F72457 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2371DE247D0D2E00F72457 /* UIView+Ext.swift */; };
+		5E2371E1247D119600F72457 /* MaskMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2371E0247D119600F72457 /* MaskMapViewModel.swift */; };
 		5EB9CBA6247CC35A0042D27D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBA5247CC35A0042D27D /* AppDelegate.swift */; };
 		5EB9CBA8247CC35A0042D27D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBA7247CC35A0042D27D /* SceneDelegate.swift */; };
-		5EB9CBAA247CC35A0042D27D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBA9247CC35A0042D27D /* ViewController.swift */; };
+		5EB9CBAA247CC35A0042D27D /* MaskMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBA9247CC35A0042D27D /* MaskMapViewController.swift */; };
 		5EB9CBAD247CC35A0042D27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9CBAB247CC35A0042D27D /* Main.storyboard */; };
 		5EB9CBAF247CC35E0042D27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9CBAE247CC35E0042D27D /* Assets.xcassets */; };
 		5EB9CBB2247CC35E0042D27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9CBB0247CC35E0042D27D /* LaunchScreen.storyboard */; };
@@ -33,10 +35,12 @@
 		2396D0CC69CE1696B9F07797 /* Pods_RxMvvmChuLeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMvvmChuLeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E1097FB0AD5B2CAEDA284D /* Pods-RxMvvmChuLe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMvvmChuLe.debug.xcconfig"; path = "Target Support Files/Pods-RxMvvmChuLe/Pods-RxMvvmChuLe.debug.xcconfig"; sourceTree = "<group>"; };
 		5B277E961B7D4449D25A1D7A /* Pods_RxMvvmChuLe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMvvmChuLe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2371DE247D0D2E00F72457 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		5E2371E0247D119600F72457 /* MaskMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskMapViewModel.swift; sourceTree = "<group>"; };
 		5EB9CBA2247CC35A0042D27D /* RxMvvmChuLe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxMvvmChuLe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB9CBA5247CC35A0042D27D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB9CBA7247CC35A0042D27D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EB9CBA9247CC35A0042D27D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EB9CBA9247CC35A0042D27D /* MaskMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskMapViewController.swift; sourceTree = "<group>"; };
 		5EB9CBAC247CC35A0042D27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EB9CBAE247CC35E0042D27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB9CBB1247CC35E0042D27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,11 +97,13 @@
 			children = (
 				5EB9CBA5247CC35A0042D27D /* AppDelegate.swift */,
 				5EB9CBA7247CC35A0042D27D /* SceneDelegate.swift */,
-				5EB9CBA9247CC35A0042D27D /* ViewController.swift */,
+				5EB9CBA9247CC35A0042D27D /* MaskMapViewController.swift */,
+				5E2371E0247D119600F72457 /* MaskMapViewModel.swift */,
 				5EB9CBAB247CC35A0042D27D /* Main.storyboard */,
 				5EB9CBAE247CC35E0042D27D /* Assets.xcassets */,
 				5EB9CBB0247CC35E0042D27D /* LaunchScreen.storyboard */,
 				5EB9CBB3247CC35E0042D27D /* Info.plist */,
+				5E2371DE247D0D2E00F72457 /* UIView+Ext.swift */,
 			);
 			path = RxMvvmChuLe;
 			sourceTree = "<group>";
@@ -119,7 +125,6 @@
 				F1B11806E6D52F16FB3BA34C /* Pods-RxMvvmChuLeTests.debug.xcconfig */,
 				03F981FF7C98BACD4D6E17CE /* Pods-RxMvvmChuLeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -318,7 +323,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EB9CBAA247CC35A0042D27D /* ViewController.swift in Sources */,
+				5E2371DF247D0D2E00F72457 /* UIView+Ext.swift in Sources */,
+				5E2371E1247D119600F72457 /* MaskMapViewModel.swift in Sources */,
+				5EB9CBAA247CC35A0042D27D /* MaskMapViewController.swift in Sources */,
 				5EB9CBA6247CC35A0042D27D /* AppDelegate.swift in Sources */,
 				5EB9CBA8247CC35A0042D27D /* SceneDelegate.swift in Sources */,
 			);

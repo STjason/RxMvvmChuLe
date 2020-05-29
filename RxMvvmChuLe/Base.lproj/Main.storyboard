@@ -1,24 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mask Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MaskMapViewController" customModule="RxMvvmChuLe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-Mb-d29">
+                                <rect key="frame" x="0.0" y="53" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="fdsafdsa" id="Dco-yW-9jP">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="KOA-A9-zU9">
+                                            <connections>
+                                                <action selector="clickToRefresh:" destination="BYZ-38-t0r" id="nZ1-AM-LI8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Kay-Ub-ESP">
+                                <rect key="frame" x="0.0" y="97" width="427" height="799"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7ag-Mb-d29" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="1dl-li-Fy4"/>
+                            <constraint firstItem="Kay-Ub-ESP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="13" id="7qq-UY-rcs"/>
+                            <constraint firstItem="7ag-Mb-d29" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8gU-Ul-jde"/>
+                            <constraint firstItem="Kay-Ub-ESP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="LjF-So-yh3"/>
+                            <constraint firstItem="Kay-Ub-ESP" firstAttribute="top" secondItem="7ag-Mb-d29" secondAttribute="bottom" id="TIz-Vc-h8o"/>
+                            <constraint firstItem="Kay-Ub-ESP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UMh-8C-XDZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ag-Mb-d29" secondAttribute="trailing" id="pKI-bd-Xdx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Kay-Ub-ESP" id="IlP-oa-y8v"/>
+                        <outlet property="navigationBar" destination="7ag-Mb-d29" id="1qS-lG-vJe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
