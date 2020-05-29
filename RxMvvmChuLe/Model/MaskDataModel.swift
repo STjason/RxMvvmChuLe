@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Mask: Decodable {
+struct MaskDm: Decodable {
     let name: String
     let phone: String
     let address: String

@@ -13,10 +13,10 @@ extension DateFormatter {
     }()
 }
 
-/*extension NumberFormatter {
+extension NumberFormatter {
     static let kiloComma: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         return formatter
     }()
-}*/
+}

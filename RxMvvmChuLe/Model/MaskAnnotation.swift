@@ -14,14 +14,10 @@ class DisplayMaskAnnotation: NSObject, MKAnnotation {
     var toastTxt: String?
 
     init(locateCoordinate: CLLocationCoordinate2D, key: String, adultCount: Int, subTitleContent: String) {
+        let adtKiloTxt = NumberFormatter.kiloComma.string(from: NSNumber(value: adultCount)) ?? ""
+        title = key + "- 成人總數量 : " + adtKiloTxt
         coordinate = locateCoordinate
         county = key
-
-        let format = NumberFormatter()
-        format.numberStyle = .decimal
-        let adtKiloTxt = format.string(from: NSNumber(value: adultCount))
-        
-        title = key + "- 成人總數量 : " + (adtKiloTxt ?? "")
         subtitle = ""
         toastTxt = subTitleContent
     }
@@ -33,7 +29,7 @@ class TmpMaskAnnotation: NSObject, MKAnnotation {
         mask?.name
     }
     var subtitle: String?
-    var mask: Mask?
+    var mask: MaskDm?
     var county: String {
         mask?.county ?? ""
     }
@@ -63,7 +59,7 @@ class TmpMaskAnnotation: NSObject, MKAnnotation {
                 return DateFormatter.customFormatter.date(from: timeString) ?? Date()
             })
 
-            mask = try? decoder.decode(Mask.self, from: data)
+            mask = try? decoder.decode(MaskDm.self, from: data)
             if let mask = mask {
                 if mask.county.isEmpty {
                     let startIdx = mask.address.startIndex
@@ -72,11 +68,8 @@ class TmpMaskAnnotation: NSObject, MKAnnotation {
                 } else {
                     finalCounty = mask.county
                 }
-                
-                let format = NumberFormatter()
-                format.numberStyle = .decimal
-                let adtKiloTxt = format.string(from: NSNumber(value: mask.maskAdult))
-                adtDisplay = adtKiloTxt ?? ""
+
+                adtDisplay = NumberFormatter.kiloComma.string(from: NSNumber(value: mask.maskAdult)) ?? ""
             }
         }
     }

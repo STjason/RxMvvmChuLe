@@ -13,12 +13,12 @@ import Moya
 import MapKit
 
 protocol MaskMapVMInput {
-    // fetch api
+    //input: trigger api
     var fetchApi: PublishSubject<Void> { get }
 }
 
 protocol MaskMapVMOutput {
-    // api result
+    //output: UI display data
     var displayMaskAnnotations: Observable<[DisplayMaskAnnotation]> { get }
 }
 
