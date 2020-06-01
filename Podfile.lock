@@ -8,8 +8,6 @@ PODS:
     - RxSwift (~> 5.0)
   - Nimble (8.0.9)
   - Quick (2.2.0)
-  - RxBlocking (5.1.1):
-    - RxSwift (~> 5)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -17,14 +15,12 @@ PODS:
     - Differentiator (~> 4.0)
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - RxNimble (4.7.1):
-    - RxNimble/RxBlocking (= 4.7.1)
   - RxNimble/Core (4.7.1):
     - Nimble (~> 8.0)
     - RxSwift (~> 5.0)
-  - RxNimble/RxBlocking (4.7.1):
-    - RxBlocking
+  - RxNimble/RxTest (4.7.1):
     - RxNimble/Core
+    - RxTest
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -42,30 +38,27 @@ PODS:
 DEPENDENCIES:
   - Moya/RxSwift (~> 14.0)
   - Quick
-  - RxBlocking (~> 5)
   - RxCocoa (~> 5)
   - RxDataSources (~> 4.0)
-  - RxNimble
+  - RxNimble/RxTest
   - RxSwift (~> 5)
   - RxSwiftExt (~> 5)
-  - RxTest (~> 5)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Nimble
     - Quick
     - RxNimble
+    - RxTest
   trunk:
     - Alamofire
     - Differentiator
     - Moya
-    - RxBlocking
     - RxCocoa
     - RxDataSources
     - RxRelay
     - RxSwift
     - RxSwiftExt
-    - RxTest
 
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
@@ -73,7 +66,6 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
-  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxNimble: dca9840cfa96ce73847813432ddc6e84e1fcdd61
@@ -82,6 +74,6 @@ SPEC CHECKSUMS:
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
 
-PODFILE CHECKSUM: 10458e8a0a8672e6b935f4d614182cf904d6bc8a
+PODFILE CHECKSUM: 531c136a1c5465479f79eb37196e59bd9b4156a4
 
 COCOAPODS: 1.9.1

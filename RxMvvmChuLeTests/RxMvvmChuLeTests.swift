@@ -9,6 +9,7 @@
 import Quick
 import Nimble
 import RxSwift
+import RxTest
 import RxNimble
 import Moya
 
@@ -16,41 +17,62 @@ import Moya
 
 class RxMvvmChuLeTests: QuickSpec {
 
-    let provider = MoyaProvider<MaskAPI>(stubClosure: { (service) -> StubBehavior in
-        return .immediate
-    })
-    var vm: MaskMapVMType!
-    let disposeBag = DisposeBag()
-
     override func spec() {
-        
-
-        describe("Request") { [weak self] in
-            guard let `self` = self else {
-                return
-            }
-
+        describe("Request") {
+            let initialClock = 0
+            var vm: MaskMapVMType!
+            var scheduler: TestScheduler!
+            var disposeBag: DisposeBag!
+            
             beforeEach {
-                self.vm = MaskMapViewModel(provider: self.provider)
-                self.vm.input.fetchApi.onNext(())
+                disposeBag = DisposeBag()
+                scheduler = TestScheduler(initialClock: initialClock, simulateProcessingDelay: false)
             }
 
-            context("CountiesAdultMask") {
+            context("StubMaskList") {
                 it("Counts") {
-                    var result: Observable<Bool> = self.setSource(false)
-                    let maskAnnotations: Observable<[DisplayMaskAnnotation]> = self.vm.output.displayMaskAnnotations
-                    result = maskAnnotations.map { $0.count == 3 }
                 
-                    expect(result).last.to(beTrue())
+                    let provider = MoyaProvider<MaskAPI>(stubClosure: { (service) -> StubBehavior in
+                        return .immediate
+                    })
+                    vm = MaskMapViewModel(provider: provider)
+                    
+                    let result = ReplaySubject<Bool>.create(bufferSize: 1)
+                    let maskAnnotations: Observable<[DisplayMaskAnnotation]> = vm.output.displayMaskAnnotations
+                    
+                    maskAnnotations
+                    .map { $0.count == 3 }
+                    .bind(to: result)
+                    .disposed(by: disposeBag)
+                
+                    vm.input.fetchApi.onNext(())
+   
+                    expect(result).events(scheduler: scheduler, disposeBag: disposeBag)
+                    .to(equal([ .next(0, true)]))
+                }
+                it("CountsName") {
+                
+                    let provider = MoyaProvider<MaskAPI>(stubClosure: { (service) -> StubBehavior in
+                        return .immediate
+                    })
+                    vm = MaskMapViewModel(provider: provider)
+                    
+                    let result = ReplaySubject<[String]>.create(bufferSize: 1)
+                    let maskAnnotations: Observable<[DisplayMaskAnnotation]> = vm.output.displayMaskAnnotations
+                    
+                    maskAnnotations
+                    .map { $0.enumerated().map { $0.element.county } }
+                    .bind(to: result)
+                    .disposed(by: disposeBag)
+                
+                    vm.input.fetchApi.onNext(())
+                
+                    expect(result).events(scheduler: scheduler, disposeBag: disposeBag)
+                    .toNot(contain([
+                        .next(0, ["紐約市", "台北縣", "三重縣"]),
+                    ]))
                 }
             }
-        }
-    }
-
-    func setSource<Value>(_ value: Value) -> Observable<Value> {
-        return .create { observer in
-            observer.onNext(value)
-            return Disposables.create()
         }
     }
 }

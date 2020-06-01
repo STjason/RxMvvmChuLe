@@ -14,10 +14,8 @@ end
 
 def test
   # Pods for testing
-    pod 'RxBlocking', '~> 5'
-    pod 'RxTest', '~> 5'
     pod 'Quick'
-    pod 'RxNimble'
+    pod 'RxNimble/RxTest'
 end
 
 target 'RxMvvmChuLe' do
