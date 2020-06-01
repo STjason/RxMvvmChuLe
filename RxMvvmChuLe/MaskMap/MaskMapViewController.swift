@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import RxSwift
 import RxCocoa
+import Moya
 
 class MaskMapViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
@@ -32,8 +33,8 @@ class MaskMapViewController: UIViewController {
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(clickToHide))
         view.addGestureRecognizer(tap)
-
-        vm = MaskMapViewModel()
+        let provider = MoyaProvider<MaskAPI>()
+        vm = MaskMapViewModel(provider: provider)
         vm.output.displayMaskAnnotations
             .subscribe(onNext: { [weak self] data in
                 DispatchQueue.main.async {

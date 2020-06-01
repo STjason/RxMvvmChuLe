@@ -40,9 +40,9 @@ class MaskMapViewModel: MaskMapVMType, MaskMapVMRelated {
     var displayMaskAnnotations: Observable<[DisplayMaskAnnotation]> = .empty()
 
     let disposeBag = DisposeBag()
-    let provider = MoyaProvider<MaskAPI>()
 
-    init() {
+
+    init(provider: MoyaProvider<MaskAPI>) {
         let tmpMask = provider.rx.request(.fetchMask)
             .filterSuccessfulStatusCodes()
             .map { result -> [TmpMaskAnnotation] in

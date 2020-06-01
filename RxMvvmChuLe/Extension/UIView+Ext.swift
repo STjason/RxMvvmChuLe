@@ -41,7 +41,7 @@ extension UIView {
                 height: expectedSize.height - 40)
 
         self.addSubview(toastTextView)
-        toastTextView.tag = 9999//tag：hideToast實用來判斷要remove哪個label
+        toastTextView.tag = 9999
     }
 
     func hideToast() {

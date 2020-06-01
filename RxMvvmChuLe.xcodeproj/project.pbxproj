@@ -14,6 +14,7 @@
 		5EB9CBAF247CC35E0042D27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9CBAE247CC35E0042D27D /* Assets.xcassets */; };
 		5EB9CBB2247CC35E0042D27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB9CBB0247CC35E0042D27D /* LaunchScreen.storyboard */; };
 		5EB9CBBD247CC35E0042D27D /* RxMvvmChuLeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBBC247CC35E0042D27D /* RxMvvmChuLeTests.swift */; };
+		5EEEA8692484A26A00FE367B /* Stub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5EEEA8682484A26900FE367B /* Stub.bundle */; };
 		66670B1951B2F2DF59297D04 /* Pods_RxMvvmChuLe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B277E961B7D4449D25A1D7A /* Pods_RxMvvmChuLe.framework */; };
 		E4E731FFE4F18A2098EB3FAB /* MaskMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E73921B0F44D6508C9CCBF /* MaskMapViewModel.swift */; };
 		E4E73225A766F17DFDB9B4BE /* MaskDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7358FFFC122FBA331EB64 /* MaskDataModel.swift */; };
@@ -49,6 +50,7 @@
 		5EB9CBB8247CC35E0042D27D /* RxMvvmChuLeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxMvvmChuLeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB9CBBC247CC35E0042D27D /* RxMvvmChuLeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMvvmChuLeTests.swift; sourceTree = "<group>"; };
 		5EB9CBBE247CC35E0042D27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EEEA8682484A26900FE367B /* Stub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Stub.bundle; sourceTree = "<group>"; };
 		87415403AE8A64C4F5B5175C /* Pods-RxMvvmChuLe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMvvmChuLe.release.xcconfig"; path = "Target Support Files/Pods-RxMvvmChuLe/Pods-RxMvvmChuLe.release.xcconfig"; sourceTree = "<group>"; };
 		E4E731E40BD505ED1F76EBD3 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		E4E7352A8DAA3FB0C67D92C2 /* Formatter+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatter+Ext.swift"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				E4E734AB3BD75BA9930C917D /* Service */,
 				E4E731DC86D894B5A915B46D /* Extension */,
 				E4E7319F17FD1262B08D8304 /* Model */,
+				5EEEA8682484A26900FE367B /* Stub.bundle */,
 			);
 			path = RxMvvmChuLe;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EEEA8692484A26A00FE367B /* Stub.bundle in Resources */,
 				5EB9CBB2247CC35E0042D27D /* LaunchScreen.storyboard in Resources */,
 				5EB9CBAF247CC35E0042D27D /* Assets.xcassets in Resources */,
 				5EB9CBAD247CC35A0042D27D /* Main.storyboard in Resources */,

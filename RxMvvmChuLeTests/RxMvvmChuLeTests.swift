@@ -6,29 +6,51 @@
 //  Copyright © 2020 chieh hsun. All rights reserved.
 //
 
-import XCTest
+import Quick
+import Nimble
+import RxSwift
+import RxNimble
+import Moya
+
 @testable import RxMvvmChuLe
 
-class RxMvvmChuLeTests: XCTestCase {
+class RxMvvmChuLeTests: QuickSpec {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    let provider = MoyaProvider<MaskAPI>(stubClosure: { (service) -> StubBehavior in
+        return .immediate
+    })
+    var vm: MaskMapVMType!
+    let disposeBag = DisposeBag()
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func spec() {
+        
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        describe("Request") { [weak self] in
+            guard let `self` = self else {
+                return
+            }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+            beforeEach {
+                self.vm = MaskMapViewModel(provider: self.provider)
+                self.vm.input.fetchApi.onNext(())
+            }
+
+            context("CountiesAdultMask") {
+                it("Counts") {
+                    var result: Observable<Bool> = self.setSource(false)
+                    let maskAnnotations: Observable<[DisplayMaskAnnotation]> = self.vm.output.displayMaskAnnotations
+                    result = maskAnnotations.map { $0.count == 3 }
+                
+                    expect(result).last.to(beTrue())
+                }
+            }
         }
     }
 
+    func setSource<Value>(_ value: Value) -> Observable<Value> {
+        return .create { observer in
+            observer.onNext(value)
+            return Disposables.create()
+        }
+    }
 }

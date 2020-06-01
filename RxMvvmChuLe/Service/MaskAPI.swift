@@ -41,6 +41,13 @@ extension MaskAPI: TargetType {
     }
 
     public var sampleData: Data {
-        "".data(using: String.Encoding.utf8)!
+        return stubbedResponse("MaskData")
+    }
+    
+    public func stubbedResponse(_ filename: String) -> Data! {
+      let bundlePath = Bundle.main.path(forResource: "Stub", ofType: "bundle")
+      let bundle = Bundle(path: bundlePath!)
+      let path = bundle?.path(forResource: filename, ofType: "json")
+      return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
     }
 }
