@@ -33,8 +33,9 @@ class MaskMapViewController: UIViewController {
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(clickToHide))
         view.addGestureRecognizer(tap)
-        let provider = MoyaProvider<MaskAPI>()
-        vm = MaskMapViewModel(provider: provider)
+        //let provider = MoyaProvider<MaskAPI>()
+        //vm = MaskMapViewModel(provider: provider)
+        vm = MaskMapViewModel()
         vm.output.displayMaskAnnotations
             .subscribe(onNext: { [weak self] data in
                 DispatchQueue.main.async {

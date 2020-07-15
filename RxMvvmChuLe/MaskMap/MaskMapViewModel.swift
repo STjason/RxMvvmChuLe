@@ -42,7 +42,8 @@ class MaskMapViewModel: MaskMapVMType, MaskMapVMRelated {
     let disposeBag = DisposeBag()
 
 
-    init(provider: MoyaProvider<MaskAPI>) {
-        displayMaskAnnotations = fetchApi.flatMap { MaskApiManager().fetchMask() }
+    //init(provider: MoyaProvider<MaskAPI>) {
+    init(manager: MaskApiManager = MaskApiManager()) {
+        displayMaskAnnotations = fetchApi.flatMap { manager.fetchMask() }
     }
 }

@@ -10,12 +10,13 @@ import Foundation
 import RxCocoa
 import RxSwift
 import Moya
+import MapKit
 
 class MaskApiManager {
     let provider = MoyaProvider<MaskAPI>()
     
     func fetchMask() -> PrimitiveSequence<SingleTrait, [DisplayMaskAnnotation]> {
-        let tmpMask = provider.rx.request(.fetchMask)
+        let tmpMask = provider.rx.request(.mask)
             .filterSuccessfulStatusCodes()
             .map { result -> [TmpMaskAnnotation] in
                 var masksAnnotation: [TmpMaskAnnotation] = []
