@@ -5,8 +5,19 @@
 
 import Moya
 
+
+/*
+public enum XxxApi {
+    case xxx
+}
+
+extension XxxApi: TargetType {
+    baseURL, path, method, task, headers, ...
+}
+*/
+
 public enum MaskAPI {
-    case fetchMask
+    case mask
 }
 
 extension MaskAPI: TargetType {
@@ -17,21 +28,21 @@ extension MaskAPI: TargetType {
 
     public var path: String {
         switch self {
-        case .fetchMask:
+        case .mask:
             return "json/points.json"
         }
     }
 
     public var method: Moya.Method {
         switch self {
-        case .fetchMask:
+        case .mask:
             return .get
         }
     }
 
     public var task: Task {
         switch self {
-        case .fetchMask:
+        case .mask:
             return .requestPlain
         }
     }

@@ -16,11 +16,12 @@
 		5EB9CBBD247CC35E0042D27D /* RxMvvmChuLeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB9CBBC247CC35E0042D27D /* RxMvvmChuLeTests.swift */; };
 		5EEEA8692484A26A00FE367B /* Stub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5EEEA8682484A26900FE367B /* Stub.bundle */; };
 		66670B1951B2F2DF59297D04 /* Pods_RxMvvmChuLe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B277E961B7D4449D25A1D7A /* Pods_RxMvvmChuLe.framework */; };
+		8F99447724BEDE01006E97D7 /* MaskApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F99447624BEDE01006E97D7 /* MaskApiManager.swift */; };
 		E4E731FFE4F18A2098EB3FAB /* MaskMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E73921B0F44D6508C9CCBF /* MaskMapViewModel.swift */; };
 		E4E73225A766F17DFDB9B4BE /* MaskDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7358FFFC122FBA331EB64 /* MaskDataModel.swift */; };
 		E4E73333E08559CC1291CA18 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E731E40BD505ED1F76EBD3 /* UIView+Ext.swift */; };
 		E4E735F5E8A78262B9730DA4 /* Formatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7352A8DAA3FB0C67D92C2 /* Formatter+Ext.swift */; };
-		E4E737EBB859BF2F3489E566 /* MaskAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E73DFAB1A48DDB3A17015C /* MaskAPI.swift */; };
+		E4E737EBB859BF2F3489E566 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E73DFAB1A48DDB3A17015C /* APIs.swift */; };
 		E4E738528F4884C563962E1A /* MaskMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7363415B5604D13791395 /* MaskMapViewController.swift */; };
 		E4E73A16C8E1636D9B49D53F /* MaskAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E738A4B175C0A6622CDBA9 /* MaskAnnotation.swift */; };
 /* End PBXBuildFile section */
@@ -52,13 +53,14 @@
 		5EB9CBBE247CC35E0042D27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EEEA8682484A26900FE367B /* Stub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Stub.bundle; sourceTree = "<group>"; };
 		87415403AE8A64C4F5B5175C /* Pods-RxMvvmChuLe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMvvmChuLe.release.xcconfig"; path = "Target Support Files/Pods-RxMvvmChuLe/Pods-RxMvvmChuLe.release.xcconfig"; sourceTree = "<group>"; };
+		8F99447624BEDE01006E97D7 /* MaskApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskApiManager.swift; sourceTree = "<group>"; };
 		E4E731E40BD505ED1F76EBD3 /* UIView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		E4E7352A8DAA3FB0C67D92C2 /* Formatter+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatter+Ext.swift"; sourceTree = "<group>"; };
 		E4E7358FFFC122FBA331EB64 /* MaskDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskDataModel.swift; sourceTree = "<group>"; };
 		E4E7363415B5604D13791395 /* MaskMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskMapViewController.swift; sourceTree = "<group>"; };
 		E4E738A4B175C0A6622CDBA9 /* MaskAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskAnnotation.swift; sourceTree = "<group>"; };
 		E4E73921B0F44D6508C9CCBF /* MaskMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskMapViewModel.swift; sourceTree = "<group>"; };
-		E4E73DFAB1A48DDB3A17015C /* MaskAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskAPI.swift; sourceTree = "<group>"; };
+		E4E73DFAB1A48DDB3A17015C /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
 		F1B11806E6D52F16FB3BA34C /* Pods-RxMvvmChuLeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMvvmChuLeTests.debug.xcconfig"; path = "Target Support Files/Pods-RxMvvmChuLeTests/Pods-RxMvvmChuLeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +163,8 @@
 		E4E734AB3BD75BA9930C917D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				E4E73DFAB1A48DDB3A17015C /* MaskAPI.swift */,
+				E4E73DFAB1A48DDB3A17015C /* APIs.swift */,
+				8F99447624BEDE01006E97D7 /* MaskApiManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -375,10 +378,11 @@
 				5EB9CBA8247CC35A0042D27D /* SceneDelegate.swift in Sources */,
 				E4E738528F4884C563962E1A /* MaskMapViewController.swift in Sources */,
 				E4E731FFE4F18A2098EB3FAB /* MaskMapViewModel.swift in Sources */,
-				E4E737EBB859BF2F3489E566 /* MaskAPI.swift in Sources */,
+				E4E737EBB859BF2F3489E566 /* APIs.swift in Sources */,
 				E4E73333E08559CC1291CA18 /* UIView+Ext.swift in Sources */,
 				E4E735F5E8A78262B9730DA4 /* Formatter+Ext.swift in Sources */,
 				E4E73A16C8E1636D9B49D53F /* MaskAnnotation.swift in Sources */,
+				8F99447724BEDE01006E97D7 /* MaskApiManager.swift in Sources */,
 				E4E73225A766F17DFDB9B4BE /* MaskDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
